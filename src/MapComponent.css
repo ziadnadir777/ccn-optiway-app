@@ -1,0 +1,82 @@
+/* Enhanced instruction box with stylish look */
+.route-info {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background: #ffffff; /* Background white for clarity */
+  padding: 15px;
+  border-radius: 10px;
+  z-index: 1000;
+  max-height: 200px; /* Set the maximum height */
+  width: 280px; /* Set a slightly wider width */
+  overflow-y: auto; /* Enable vertical scrolling */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15); /* Softer, more noticeable shadow */
+  border: 2px solid #007bff; /* Add a border with a primary blue color */
+  font-family: 'Arial', sans-serif; /* Clean, modern font */
+}
+
+/* Heading styling for instructions */
+.route-info h3 {
+  margin: 0 0 10px;
+  font-size: 18px;
+  color: #007bff; /* Blue heading for visibility */
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/* Instruction list styling */
+.route-info ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+/* Individual instruction item */
+.route-info ul li {
+  background: #f8f9fa; /* Light grey background for each item */
+  margin: 8px 0;
+  padding: 10px;
+  border-radius: 6px; /* Rounded corners for a modern look */
+  font-size: 14px;
+  color: #333; /* Dark text for readability */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover effect for instruction items */
+.route-info ul li:hover {
+  background-color: #e9ecef; /* Light blue-grey on hover */
+  transform: translateY(-3px); /* Lift the item slightly on hover */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .route-info {
+    bottom: 5px;
+    left: 5px;
+    max-height: 150px; /* Reduce max height */
+    width: 220px; /* Adjust width for smaller devices */
+    padding: 12px;
+  }
+}
+
+/* Further adjustments for very small screens */
+@media (max-width: 480px) {
+  .route-info {
+    bottom: 5px;
+    left: 5px;
+    max-height: 120px; /* Further reduce height */
+    width: 180px; /* Further adjust width */
+    padding: 10px;
+  }
+
+  .route-info ul li {
+    font-size: 12px; /* Smaller font for compact devices */
+  }
+}
+
+/* Hide the default routing instruction box */
+.leaflet-routing-container {
+  display: none !important;
+}

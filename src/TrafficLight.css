@@ -1,0 +1,88 @@
+.traffic-light-container {
+  display: flex;
+  flex-direction: column; /* Align items vertically */
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-image: url('./pexels-chrisbck-3792011.jpg'); /* Background image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Logo Image */
+.logo-image {
+  width: 150px; /* Adjust logo width */
+  height: auto; /* Maintain aspect ratio */
+  margin-bottom: 20px; /* Space between logo and app name */
+  position: absolute;
+  top: 50px; /* Adjust this to control how far from the top */
+}
+
+/* App Name Image */
+.app-name-image {
+  width: 180px; /* Adjust app name image width */
+  height: auto; /* Maintain aspect ratio */
+  margin-bottom: 40px; /* Space between app name and welcome button */
+  position: absolute;
+  top: 120px; /* Adjust this to control distance from logo */
+}
+
+.welcome-button {
+  position: relative;
+  padding: 10px 25px;  /* Reduced padding to make button smaller */
+  background-color: #1a1a1a;
+  color: #ff4747;
+  font-size: 18px;  /* Reduced font size to make text smaller */
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;  /* Adjusted border-radius to fit smaller button */
+  cursor: pointer;
+  text-transform: uppercase;
+  z-index: 1;
+
+  /* 3D shadow effect */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.3s ease;
+
+  /* Center the button */
+  margin-top: 20px; /* Adjust space above button */
+}
+/* Hover effect */
+.welcome-button:hover {
+  transform: scale(1.1);
+  background-color: #ff4747;
+  color: #1a1a1a;
+  box-shadow: 0 8px 20px rgba(255, 71, 71, 0.8);
+}
+
+/* Dynamic cadre around the button */
+.dynamic-cadre {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  border-radius: 16px;
+  border: 3px solid transparent;
+  background: linear-gradient(90deg, red, blue);
+  background-size: 200% 200%;
+  z-index: -1;
+  
+  /* Animation for red and blue colors moving around the button */
+  animation: dynamic-glow 2s infinite linear;
+}
+
+/* Dynamic animation keyframes */
+@keyframes dynamic-glow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

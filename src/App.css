@@ -1,0 +1,17 @@
+/* General App styling */
+.App {
+  text-align: center;
+  min-height: 100vh;
+  min-width: 100vw;  /* Ensure it takes full width */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Welcome Screen container */
+.welcome-screen {
+  width: 100%; 
+  height: 100vh;  /* Ensure full height of the viewport */
+}
+/* index.css or App.css */
+@import url('https://unpkg.com/leaflet@1.7.1/dist/leaflet.css');

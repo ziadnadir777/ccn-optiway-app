@@ -1,0 +1,27 @@
+
+  .map-placeholder {
+    width: 100%;
+    height: 400px;
+    background-color: #eee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  iframe {
+    border: 0;
+  }
+  /* UserMap.css */
+.map-container {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+
+.leaflet-container {
+  z-index: 0;
+}
+
+.leaflet-routing-container {
+  z-index: 1000 !important; /* Make sure routing path is on top */
+}
